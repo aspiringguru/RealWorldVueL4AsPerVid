@@ -18,7 +18,7 @@ We encourage you to follow the course on Vue Mastery, and code along with us. Th
 | 12 - Vuex Mutations & Actions Part 1 | [Starting Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson12-mutations%26actions1-start) | [Finished Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson12-mutations%26actions1-finish) |
 | 13 - Vuex Mutations & Actions Part 2 | [Starting Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson13-mutations%26actions2-start) | [Finished Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson13-mutations%26actions2-finish) |
 | 14 - Vuex Modules                    | [Starting Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson14-modules-start)              | [Finished Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson14-modules-finish)              |
-| 15 - Success & Error Notifications    | [Starting Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson15-notifications-start)         | [Finished Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson15-notifications-finish)         |
+| 15 - Success & Error Notifications   | [Starting Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson15-notifications-start)        | [Finished Code](https://github.com/Code-Pop/real-world-vue/releases/tag/lesson15-notifications-finish)        |
 
 ## Project setup
 
@@ -42,4 +42,19 @@ npm run build
 
 ```
 npm run lint
+```
+
+### install and work notes
+
+```
+
+json-server --watch db.json
+#above = no delay
+json-server -d 1500 --watch db.json
+#above = 1.5 second delay
+
+npm install
+yarn serve
+
+
 ```
