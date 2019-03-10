@@ -3,10 +3,11 @@ import Router from 'vue-router'
 import EventCreate from './views/EventCreate.vue'
 import EventList from './views/EventList.vue'
 import EventShow from './views/EventShow.vue'
+import NProgress from 'nprogress'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -27,3 +28,16 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((routeTo, routeFrom, next) => {
+  //start the progress bar when routing begins.
+  NProgress.start()
+  next()
+})
+
+router.AfterEach(() => {
+  //finish the routing bar when progress is done
+  NProgress.done()
+})
+
+export default router
