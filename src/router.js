@@ -35,7 +35,7 @@ router.beforeEach((routeTo, routeFrom, next) => {
   next()
 })
 
-router.AfterEach(() => {
+router.afterEach(() => {
   //finish the routing bar when progress is done
   NProgress.done()
 })
