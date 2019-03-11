@@ -63,7 +63,8 @@ export const actions = {
     if (event) {
       commit('SET_EVENT', event)
     } else {
-      EventService.getEvent(id)
+      //need to return the promise so beforeEnter in router.js works.
+      return EventService.getEvent(id)
         .then(response => {
           commit('SET_EVENT', response.data)
         })
