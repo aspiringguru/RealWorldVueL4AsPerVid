@@ -26,11 +26,15 @@ const router = new Router({
       name: 'event-show',
       component: EventShow,
       props: true,
+      //nb: because props set to true, parameter that matches name set as a prop,
+      //    it is sent in as a prop.
       beforeEnter(routeTo, routeFrom, next) {
         //this runs after the global beforeEach
         //starts the progress bar.
         //fetchEvent module in event.js must return a promise
-        store.dispatch('event/fetchEvent', routeTo.params.id).then(() => {
+        store.dispatch('event/fetchEvent', routeTo.params.id).then(event => {
+          //event received from action
+          routeTo.params.event = event
           next()
         })
       }
